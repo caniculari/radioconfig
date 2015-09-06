@@ -3,7 +3,7 @@
 
 from hnmp import SNMP
 
-hostname = "172.21.11.239"
+hostname = "10.0.10.220"
 comm = "netman"
 
 hardware_info = { 'name': ".1.3.6.1.2.1.1.5.0",

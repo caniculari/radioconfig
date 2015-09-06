@@ -4,11 +4,8 @@
 import argparse
 from hnmp import SNMP
 
-    print ("RB SNR:", snr)
 #snmp library source https://github.com/trehn/hnmp
 
-class Radioparams:
-    def __init__
 
 # Argument parser
 parser= argparse.ArgumentParser(
