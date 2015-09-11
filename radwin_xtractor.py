@@ -37,6 +37,8 @@ link_info = { 'link id' : '.1.3.6.1.4.1.4458.1000.1.5.3.0',
     'Band' : '.1.3.6.1.4.1.4458.1000.1.5.53.4.0',
     'Antenna type' : '.1.3.6.1.4.1.4458.1000.1.5.48.0',
     'Tx Power': '.1.3.6.1.4.1.4458.1000.1.5.50.0',
+    'Antenna gain': '1.3.6.1.4.1.4458.1000.1.5.42.0',
+    'Antenna mode': '.1.3.6.1.4.1.4458.1000.1.5.58.0',
 }
 network_info = { 'IP address' : '.1.3.6.1.4.1.4458.1000.1.1.6.0',
     'Netmask' : '.1.3.6.1.4.1.4458.1000.1.1.7.0',
@@ -58,4 +60,14 @@ for i, j in network_info.items():
 # Change representation of some definitions
 #hardware_info['MAC-Address'] = hardware_info['MAC-Address']
 
-print (hardware_info)
+print ("----- Hardware info -----")
+for i, j in hardware_info.items():
+    print (i, ':', j)
+print ("----- Link info -----")
+for i, j in link_info.items():
+    print (i, ':', j)
+print ("----- Network info -----")
+for i, j in network_info.items():
+    print (i, ':', j)
+
+
