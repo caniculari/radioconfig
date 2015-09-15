@@ -41,6 +41,7 @@ link_info = { '1) Link ID' : '.1.3.6.1.4.1.4458.1000.1.5.3.0',
     '8) Antenna gain': '1.3.6.1.4.1.4458.1000.1.5.42.0',
     '7) Antenna Mode': '.1.3.6.1.4.1.4458.1000.1.5.58.0',
     '9) Tranmission Type': '1.3.6.1.4.1.4458.1000.1.5.58.0',
+    '11) Rate Mbps': '1.3.6.1.4.1.4458.1000.1.5.28.0',
 }
 network_info = { 'IP address' : '.1.3.6.1.4.1.4458.1000.1.1.6.0',
     'Netmask' : '.1.3.6.1.4.1.4458.1000.1.1.7.0',
@@ -82,6 +83,10 @@ elif link_info["6) Antenna Type"] == 3:
     link_info["6) Antenna Type"] = "Embedded external"
 elif link_info["6) Antenna Type"] == 4:
     link_info["6) Antenna Type"] = "Embedded integrated"
+if link_info["11) Rate Mbps"] == 0:
+    link_info["11) Rate Mbps"] = "Adaptive"
+else:
+    link_info["11) Rate Mbps"] = link_info["11) Rate Mbps"] * 2 / 10 
 
 # Sort
 hi = sorted(hardware_info.items(), key=lambda t: t[0])
